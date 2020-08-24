@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: calc-app
+  namespace: calc
+spec:
+  selector:
+    matchLabels:
+      run: calc-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: calc-app
+    spec:
+      containers:
+      - name: calc-app
+        image: askarissayev/calc-application:1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
