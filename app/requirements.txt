@@ -1,2 +1,2 @@
-flask
-prometheus_flask_exporter
+Flask == 1.0.3
+prometheus_client == 0.7.1
